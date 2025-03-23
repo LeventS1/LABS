@@ -1,0 +1,156 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+  li a:hover {
+    background-color: #111;
+  }
+
+
+.titles {
+    text-align: center;
+    font-family: "serif", garamond;
+}
+
+/*
+#AboutUsImage {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+}
+
+this image isn't here anymore, but save this code for later for some other image
+*/
+#DiscordButton {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    transition-duration: 0.3s;
+    margin: auto;
+    position: absolute;
+
+
+}
+
+#DiscordButton:hover {
+    background-color: rgb(15, 120, 60);
+    
+}
+
+#GoogleCalendar {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+
+}
+
+
+.AboutUsPage {
+  
+  background-color: #A8DDAC;
+}
+
+#GBHSLogo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 12%;
+  width: 7%;
+  margin-left: 95%;
+}
+
+
+#DiscordButtonText {
+
+  text-decoration: underline;
+}
+
+
+#HomePageBackground {
+  background-image: url("LabBackgroundImage2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  margin: 10px;
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+}
+
+.news-content {
+  padding: 15px;
+
+}
+
+.news-content h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.news-content p {
+  color: gray;
+}
+
+.read-more {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
