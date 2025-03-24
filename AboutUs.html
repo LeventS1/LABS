@@ -1,8 +1,82 @@
 <!DOCTYPE html>
-<body class="AboutUsPage">
-    <h2 class="titles">About Us</h2>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Floating Images in Boxes</title>
     <link rel="stylesheet" href="CSS.css">
+    <style>
+        /* Ensure this CSS is either in the <style> section or in your external file */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .about-section {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for multiple rows */
+            justify-content: center; /* Center align all the boxes */
+            padding: 50px;
+            gap: 40px;
+            background-color: #f4f4f4;
+        }
+
+        .person-box {
+            width: 300px; /* Set width of each person box */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            transform: translateY(100px); /* Starts off-screen */
+            opacity: 0; /* Hidden at first */
+            transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Floating effect */
+        }
+
+        .person-box img {
+            width: 100%; /* Make image fill the box */
+            border-radius: 8px;
+        }
+
+        .person-box .text {
+            margin-top: 15px;
+        }
+
+        .person-box h2 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .person-box p {
+            font-size: 16px;
+        }
+  
+        #WhyJoinTitle{
+          text-align: center;
+          position: relative;
+          top: 500px;
+        }
+        #MissionStatement{
+          text-align: center;
+          position: relative;
+          top: 200px;
+        }
+        #WhyJoinText{
+          margin-right: 14%;
+          margin-left: 14%;
+        }
+        #MissionStatementText{
+          margin-right: 14%;
+          margin-left: 14%;
+        }
+    </style>
+</head>
+<body class="AboutUsPage">
+
+    <h2 class="titles">About Us</h2>
 
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -10,36 +84,94 @@
         <li><a href="AboutUs.html">About Us</a></li>
         <li><a href="News.html">News</a></li>
         <li><a href="CurrentResearchProjects.html">Current Research Projects</a></li>
-      </ul>
+    </ul>
 
+    <h2 id="MissionStatement">Mission Statement and Description</h2>
+<p id="MissionStatementText"> </p>
 
-<h4 id="AboutUsExplanation">We are a club focused on research and advancing our understand of biomedical........</h4>
+    <h2 id="WhyJoinTitle">Why Join?  
+      <br>
+      <br>
+      <br>
+      <p id="WhyJoinText">
+        Why join LABS? Leaders in Advanced Biomedical Sciences in a club made for those who enjoy science and experimentation. You will be able to meet like minded people who share your interests, make connections with professors, doctors, and many others in the related fields. You will be able to partake in hands-on research and explore a lab setting. Not only will joining this club be great for college applications(showing initiative and interest), but it will also allow you to explore biology as a career and learn about its career pathways. I hope to see you in our next meeting!
 
+      </p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      </h2>
+    <h2 class="titles">Meet the Team! 
+    </h2>
 
-<h2 class="titles">
-  Meet the Team!
-</h2>
-<img src="MyImage.jpg">
-<h4>Hello! My name is Levent Sumer and I am a freshman at Granite Bay High School. I am the president of the LABS club and love learning about biology! I cant wait for a fun and educational time with you guys and I hope you enjoy this club and learn something new!
-</h4>
+    <!-- About Us Section with Boxes -->
+    <div class="about-section">
+        <!-- Person 1 Box -->
+        <div class="person-box">
+            <img src="MyImage.jpg" alt="Person 1">
+            <div class="text">
+                <h2>John Doe</h2>
+                <p>John is a passionate web developer with experience in HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
 
+        <!-- Person 2 Box -->
+        <div class="person-box">
+            <img src="MyImage.jpg" alt="Person 2">
+            <div class="text">
+                <h2>Jane Smith</h2>
+                <p>Jane is a UX designer who loves creating intuitive user experiences for web and mobile apps.</p>
+            </div>
+        </div>
 
+        <!-- Person 3 Box -->
+        <div class="person-box">
+            <img src="MyImage.jpg" alt="Person 3">
+            <div class="text">
+                <h2>Sam Wilson</h2>
+                <p>Sam is a back-end developer who specializes in Python, Node.js, and cloud computing.</p>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        window.addEventListener("scroll", function () {
+            let boxes = document.querySelectorAll(".person-box");
+            boxes.forEach(box => {
+                let boxTop = box.getBoundingClientRect().top;
+                let windowHeight = window.innerHeight;
 
-
-
-
-
-
-
-
-
-
-
-
-
+                // Check if the box is almost in view to apply the effect
+                if (boxTop < windowHeight - 100) {
+                    box.style.transform = "translateY(0px)"; // Move up
+                    box.style.opacity = "1"; // Fade in effect
+                }
+            });
+        });
+    </script>
 
 
 
 
 </body>
+</html>
