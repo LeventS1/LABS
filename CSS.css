@@ -44,15 +44,15 @@ this image isn't here anymore, but save this code for later for some other image
     background-color: #04AA6D;
     border: none;
     color: white;
-    padding: 5px 10px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 12px;
     transition-duration: 0.3s;
-    margin: auto;
-    position: absolute;
+    margin-left: 100px;
+    justify-content: center;
 
 
 }
@@ -65,7 +65,7 @@ this image isn't here anymore, but save this code for later for some other image
 #GoogleCalendar {
 
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: 100%;
   padding: 20px;
@@ -93,14 +93,14 @@ this image isn't here anymore, but save this code for later for some other image
   text-decoration: underline;
 }
 
-
+/*
 #HomePageBackground {
   background-image: url("LabBackgroundImage2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
 }
-
+*/
 
 
 .news-container {
@@ -153,4 +153,77 @@ this image isn't here anymore, but save this code for later for some other image
 .news-card:hover {
   transform: scale(1.05);
   transition: 0.2s ease-in-out;
+}
+
+
+
+#HomePageIntro {
+
+  text-align: center;
+  font-family: "serif", garamond;
+}
+
+
+#HomePageDescription {
+  text-align: center;
+}
+
+
+#DiscordButtonDiv {
+
+  text-align: center;
+}
+
+#DiscordButtonNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  position: relative;
+  top: 600px;
+}
+
+#BecomeAMemberNavbar {
+  height: 350px;
+  background: url('LabBackgroundImage2.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#navbar-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#navbar-content {
+  position: relative;
+  color: white; /* Make text visible */
+  font-size: 20px;
+}
+
+#BecomeAMemberButton {
+  background-color: rgb(104, 201, 8);
+  border: none;
+  color: white;
+  padding: 0px 300px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 8px;
+  transition-duration: 0.3s;
+  justify-content: center;
+
+}
+
+
+#BecomeAMemberButton:hover{
+  background-color: rgb(211, 145, 1);
 }
