@@ -1,7 +1,47 @@
 <!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  
+  <!-- Google Fonts for a fancy yet readable font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  
+  <style>
+      /* Styling for the quote container */
+      .quote-container {
+          text-align: center;
+          margin-top: 150px; /* Adjusted margin to make sure it’s below the header */
+          opacity: 0;
+          transform: translateY(100px); /* Starts below the view */
+          transition: transform 1s ease-out, opacity 1s ease-out;
+      }
+
+      /* Apply the Playfair Display font for the quote */
+      .quote-text {
+          font-family: 'Playfair Display', serif;
+          font-size: 60px; /* Larger font size for the quote */
+          font-style: italic;
+          color: #333;
+          line-height: 1.4; /* More space between lines */
+          margin: 0;
+      }
+
+      /* Apply the Roboto font for the author */
+      .quote-author {
+          font-family: 'Roboto', sans-serif;
+          font-size: 30px; /* Slightly smaller than the quote */
+          font-weight: bold;
+          color: #555;
+          margin-top: 20px; /* Add some space between the quote and author */
+      }
+  </style>
+</head>
+
+
 <body id="HomePageBackground">
   <link rel="stylesheet" href="CSS.css">
-  <h2 class="titles">LABS-Leaders in Advanced Biomedical Sciences</h2>
+  <h1 class="titles">Granite Bay LABS</h1>
   <img src="GBHSLogo.png" id="GBHSLogo">
 
     <ul id="HomePageNav">
@@ -12,8 +52,50 @@
         <li><a href="CurrentResearchProjects.html">Current Research Projects</a></li>
       </ul>
 
-      <button onclick="window.open('https://discord.gg/B49butV2wY', '_blank' )" id="DiscordButton" >
-        <p id="DiscordButtonText">Join our Discord</p>
-      </button>
-  
+
+<h1 id="HomePageIntro">Granite Bay LABS - Leaders in Advanced Biomedical Sciences</h1>
+<h4 id="HomePageDescription">Empowering the Next Generation of STEM Leaders</h4>
+
+<div id="BecomeAMemberNavbar">
+  <div id="navbar-overlay"></div>
+  <div id="navbar-content">
+     <button onclick="window.open('/*put google forms link here later */', '_blank' )"  id="BecomeAMemberButton">
+    <p id="MemberButtonText">Become a Member!</p>
+  </button></div>
+</div>
+
+
+
+<div class="quote-container">
+  <p class="quote-text">"If we knew what it was we were doing, it would not be called research, would it?"</p>
+  <p class="quote-author">— Albert Einstein</p>
+</div>
+
+<script>
+  window.addEventListener("scroll", function () {
+      let quoteContainer = document.querySelector(".quote-container");
+      let quoteTop = quoteContainer.getBoundingClientRect().top;
+      let windowHeight = window.innerHeight;
+
+      // Check if the quote is almost in view to apply the effect
+      if (quoteTop < windowHeight - 100) {
+          quoteContainer.style.transform = "translateY(0px)"; // Move up
+          quoteContainer.style.opacity = "1"; // Fade in effect
+      }
+  });
+</script>
+
+
+<div id="DiscordButtonDiv">
+  <ul id="DiscordButtonNav">
+    <li>
+  <button onclick="window.open('https://discord.gg/B49butV2wY', '_blank' )"  id="DiscordButton">
+    <p id="DiscordButtonText">Join our Discord</p>
+  </button>
+  </li>
+</ul>
+</div>
+
+   
+
 </body>
